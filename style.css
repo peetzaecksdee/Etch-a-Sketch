@@ -1,0 +1,55 @@
+:root {
+    font-family: Nunito;
+}
+
+* *::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 32px 0;
+}
+
+.header-text {
+    font-size: 50px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background: rgba(0,0,0,0.1);
+}
+
+.body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 80%;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    gap: 18px;
+}
+
+.button-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background: #FFFFFF;
+}
+
+#square {
+    flex: 1 1 auto;
+    background-color: var(--background-color-square);
+}

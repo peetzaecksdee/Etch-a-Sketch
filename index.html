@@ -4,11 +4,28 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
-        <title>Etch a Sketch</title>
+        <script src="index.js" defer></script>
+        <title>Sketch</title>
     </head>
     <body>
-        
+        <header class="header">
+            <h1 class="header-text">Sketching pad</h1>
+        </header>
+        <main class="body">
+            <div class="settings-container">
+                <input type="color">
+                <button>Color</button>
+                <button>Rainbow</button>
+                <button>Shading</button>
+                <button>Brightening</button>
+                <button>Eraser</button>
+                <button>Clear</button>
+                <span id="size"></span>
+                <input type="range" id="square-per-columns" min="1" max="96">
+            </div>
+            <div class="button-container"></div>
+        </main>
     </body>
 </html>
