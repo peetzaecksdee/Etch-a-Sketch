@@ -89,6 +89,13 @@ button {
   background: #4ca084;
 }
 
+.size-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Footer */
 
 footer {

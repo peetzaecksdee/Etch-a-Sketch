@@ -8,6 +8,8 @@ const rainbowBtn = document.querySelector("#rainbowBtn");
 const shadingBtn = document.querySelector("#shadingBtn");
 const brighteningBtn = document.querySelector("#brighteningBtn");
 const clearBtn = document.querySelector("#clearBtn");
+const sizeSlider = document.querySelector("#size");
+const sizeText = document.querySelector("#size-text");
 
 // Variables
 let gridSize = 16;
@@ -59,9 +61,7 @@ function dragHandler(e) {
     return e.target.style.setProperty(
       "--background",
       `rgb(${backgroundColor.map((a) =>
-        parseInt(a) - 15 >= 0
-          ? parseInt(a) - 15
-          : parseInt(a) - parseInt(a) - 0
+        parseInt(a) - 15 >= 0 ? parseInt(a) - 15 : parseInt(a) - parseInt(a) - 0
       )})`
     );
   }
@@ -96,6 +96,7 @@ rainbowBtn.addEventListener("click", () => (mode = "rainbow"));
 shadingBtn.addEventListener("click", () => (mode = "shading"));
 brighteningBtn.addEventListener("click", () => (mode = "brightening"));
 clearBtn.addEventListener("click", () => clearCanvas());
+sizeSlider.addEventListener("change", (e) => slideSize(e.target.value));
 
 // Events for buttons activating
 document.querySelectorAll("button").forEach((button) => {
@@ -124,4 +125,11 @@ function randomColor() {
 function clearCanvas() {
   gridContainer.innerHTML = "";
   generateGrids(gridSize);
+}
+
+// Size Slider
+function slideSize(e) {
+  clearCanvas();
+  generateGrids(e);
+  sizeText.textContent = `${e} x ${e}`
 }
