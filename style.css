@@ -1,6 +1,6 @@
 :root {
   --size: 16;
-  --grid-background: #FFFFFF;
+  --background: rgb(255,255,255);
 }
 
 * {
@@ -11,7 +11,7 @@
 
 body {
   font-family: Nunito;
-  background: #E1EFF6;
+  background: #e1eff6;
 }
 
 /* Header */
@@ -26,7 +26,7 @@ header {
   font-weight: 700;
 }
 
-/* Body */ 
+/* Body */
 
 main {
   display: flex;
@@ -41,6 +41,17 @@ input[type="color"] {
   width: 100px;
   height: 100px;
   border: none;
+  background-color: #e1eff6;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 12px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 12px;
 }
 
 .grid-container {
@@ -49,10 +60,53 @@ input[type="color"] {
   grid-template-rows: repeat(var(--size), 1fr);
   width: 500px;
   height: 500px;
-  background-color: white;
+  background-color: #ffffff;
   user-select: none;
 }
 
 .grid {
-  background-color: var(--grid-background);
+  background-color: var(--background);
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  background: #51b392;
+  color: white;
+  font-size: 14px;
+}
+
+.active {
+  background: #4ca084;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: var(--hero-background);
+  text-align: center;
+  color: var(--hero-main-text);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer img {
+  width: 18px;
+  height: 18px;
 }
