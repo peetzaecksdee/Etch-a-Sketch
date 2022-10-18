@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <title>Etch a Sketch</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Etch a Sketch</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="header-text">Sketch your own image</span>
+    </header>
+    <main>
+      <input type="color" id="color"/>
+      <div class="grid-container"></div>
+      <div class="settings">
+        <button>Color</button>
+        <button>Rainbow</button>
+        <button>Shading</button>
+        <button>Brightening</button>
+        <button>Clear</button>
+      </div>
+      <div class="size-selector">
+        <input type="range" id="size" min="1" max="100" />
+        <p>text</p>
+      </div>
+    </main>
+  </body>
 </html>
