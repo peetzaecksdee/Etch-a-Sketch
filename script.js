@@ -97,6 +97,7 @@ shadingBtn.addEventListener("click", () => (mode = "shading"));
 brighteningBtn.addEventListener("click", () => (mode = "brightening"));
 clearBtn.addEventListener("click", () => clearCanvas());
 sizeSlider.addEventListener("change", (e) => slideSize(e.target.value));
+sizeSlider.addEventListener("mousemove", (e) => updateSizeText(e.target.value));
 
 // Events for buttons activating
 document.querySelectorAll("button").forEach((button) => {
@@ -129,7 +130,10 @@ function clearCanvas() {
 
 // Size Slider
 function slideSize(e) {
-  sizeText.textContent = `${e} x ${e}`
   gridSize = e;
   clearCanvas();
+}
+
+function updateSizeText(e) {
+  sizeText.textContent = `${e} x ${e}`
 }
