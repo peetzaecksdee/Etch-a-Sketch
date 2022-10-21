@@ -129,7 +129,7 @@ function clearCanvas() {
 
 // Size Slider
 function slideSize(e) {
-  clearCanvas();
-  generateGrids(e);
   sizeText.textContent = `${e} x ${e}`
+  gridSize = e;
+  clearCanvas();
 }
